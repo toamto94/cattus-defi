@@ -34,5 +34,8 @@
     "@truffle/hdwallet-provider": "^1.4.2",
     "dotenv": "^9.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.3"
+  }
 }

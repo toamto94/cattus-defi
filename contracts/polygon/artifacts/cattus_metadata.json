@@ -1,0 +1,551 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Approval",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "admin_address",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "subtractedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "decreaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "addedValue",
+						"type": "uint256"
+					}
+				],
+				"name": "increaseAllowance",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_initialAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "initialize",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initialized",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "poolFee",
+				"outputs": [
+					{
+						"internalType": "uint24",
+						"name": "",
+						"type": "uint24"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"allowance(address,address)": {
+					"details": "See {IERC20-allowance}."
+				},
+				"approve(address,uint256)": {
+					"details": "See {IERC20-approve}. Requirements: - `spender` cannot be the zero address."
+				},
+				"balanceOf(address)": {
+					"details": "See {IERC20-balanceOf}."
+				},
+				"decimals()": {
+					"details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless {_setupDecimals} is called. NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
+				},
+				"decreaseAllowance(address,uint256)": {
+					"details": "Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
+				},
+				"increaseAllowance(address,uint256)": {
+					"details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
+				},
+				"name()": {
+					"details": "Returns the name of the token."
+				},
+				"symbol()": {
+					"details": "Returns the symbol of the token, usually a shorter version of the name."
+				},
+				"totalSupply()": {
+					"details": "See {IERC20-totalSupply}."
+				},
+				"transfer(address,uint256)": {
+					"details": "See {IERC20-transfer}. Requirements: - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`."
+				},
+				"transferFrom(address,address,uint256)": {
+					"details": "See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/polygon/cattus.sol": "cattus"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/introspection/IERC165.sol": {
+			"keccak256": "0xd2f30fad5b24c4120f96dbac83aacdb7993ee610a9092bc23c44463da292bf8d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e3d4e72409e392c7694b6405a0136cf073d8da016df33ef8f9ad195f724ebfea",
+				"dweb:/ipfs/QmPGcddKq6CgsiKnxUUif2q76wRqP3dmdQ6bKuHCLmb8Wa"
+			]
+		},
+		"@openzeppelin/contracts/math/SafeMath.sol": {
+			"keccak256": "0xe22a1fc7400ae196eba2ad1562d0386462b00a6363b742d55a2fd2021a58586f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4a635cec58fb4141a16cfd408f1a21ac944c335a3beaba541c35d2e95c04536f",
+				"dweb:/ipfs/QmXWcz73UenN1ji8jiWMbzxHjjfLbNQwLVKTEB5zNFE34K"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+			"keccak256": "0x36b5ca4eabe888b39b10973621ca0dcc9b1508f8d06db9ddf045d7aa7c867d4a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ccbd79e8d556aa7011babb0e5d1e55a966add74853e7ba0274ff184bd96ef002",
+				"dweb:/ipfs/QmV28ozNRUFDiDUMvCwcFmLTQPG6nfvgeKr4cmbHWoegtH"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xbd74f587ab9b9711801baf667db1426e4a03fd2d7f15af33e0e0d0394e7cef76",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2d0913dfbfce90d170df0d496ad7596c0778518e5fa7aba6c32562522546f66b",
+				"dweb:/ipfs/QmR6B8nLj2PJf5e1JWD9Nk7ErkAwkqUwadCnvE82FJr1RU"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xb11597841d47f7a773bca63ca323c76f804cb5d944788de0327db5526319dc82",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://930d2da1934886a1098753be4173dd89c45ca0b306a1930accd37e00b1af4aaf",
+				"dweb:/ipfs/QmVSXnvEV41d43k8cfpANHoTYMKgBDBL8iCbxkLfEtQZBe"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Enumerable.sol": {
+			"keccak256": "0x2789dfea2d73182683d637db5729201f6730dae6113030a94c828f8688f38f2f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://36374eaa68c0737bf7e1ae13d55327b4868fb0825e971ee729f4b8d355ededb4",
+				"dweb:/ipfs/QmYN9yuzz4P5SumiT6rgYgTEY8MhnPQapMwx2LHxRKju7r"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Metadata.sol": {
+			"keccak256": "0xc82c7d1d732081d9bd23f1555ebdf8f3bc1738bc42c2bfc4b9aa7564d9fa3573",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5cb07e4ff3352161510a0d1536fe93f3c62526358e073a8bab2a8abbb27d0da1",
+				"dweb:/ipfs/QmX7K1JjnWKT1JzZT92Qx5zNJQYbssE533TLFHP88hj2fb"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0x05604ffcf69e416b8a42728bb0e4fd75170d8fac70bf1a284afeb4752a9bc52f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a8a7fd1043372336ecccdbcbcf4962c6df8958dc9c7c7f8361fc2b3dd23570cc",
+				"dweb:/ipfs/QmYHKgZxnanBfu7Q8ZicVhDDuB7XRGxuwvmCjfQQ1E5j39"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f",
+				"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96"
+			]
+		},
+		"@uniswap/v3-core/contracts/libraries/TickMath.sol": {
+			"keccak256": "0xda8c2c0b12d2976acfd364453ba5f5bf0117ba3c91175ee9e1067d3fb26944d9",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://3f3d2d7c2723c91830c74d96292f28fc1cfe28d388cdb9c1a5ebadb4c2b96f81",
+				"dweb:/ipfs/QmYU4wk8MEm33wVWR38LoncvR7b8PP1mLuGBKX3dUpYJVE"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/interfaces/IERC721Permit.sol": {
+			"keccak256": "0x9e3c2a4ee65ddf95b2dfcb0815784eea3a295707e6f8b83e4c4f0f8fe2e3a1d4",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://bfd939085b3618101b955f87c7fabf38338ba1aad480295acb8102ebc5d72471",
+				"dweb:/ipfs/QmauQD8bGDHTztmTDfaKXjzM7Wacrq2XU7VcTbwn1WrDBL"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/interfaces/INonfungiblePositionManager.sol": {
+			"keccak256": "0xe1dadc73e60bf05d0b4e0f05bd2847c5783e833cc10352c14763360b13495ee1",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://6e3b10f75c101de044c1253672207399c1513fd1f0f17be31069c18c0b9a1460",
+				"dweb:/ipfs/QmXrkXNY6njQfepE7KbRtJMruGXfrZwsMMsW7m5e3XS9Hf"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/interfaces/IPeripheryImmutableState.sol": {
+			"keccak256": "0x7affcfeb5127c0925a71d6a65345e117c33537523aeca7bc98085ead8452519d",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://e16b291294210e71cb0f20cd0afe62ae2dc6878d627f5ccc19c4dc9cd80aec3f",
+				"dweb:/ipfs/QmQGitSyBr26nour81BZmpmDMyJpvZRqHQZvnCD1Acb127"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/interfaces/IPeripheryPayments.sol": {
+			"keccak256": "0xb547e10f1e69bed03621a62b73a503e260643066c6b4054867a4d1fef47eb274",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://f9a90f58f5fd5fb42f7811f4094113b532f307b14a73764c91f977590747f407",
+				"dweb:/ipfs/QmSeNH2mfiDMKf3Q6V2sqtNxx1s72JNuA1VVxRM9HoMqYp"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/interfaces/IPoolInitializer.sol": {
+			"keccak256": "0x9d7695e8d94c22cc5fcced602017aabb988de89981ea7bee29ea629d5328a862",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://61b50933026ee1017db2a6273af8cedc3238c95dca58880db0918dbdbb2f064f",
+				"dweb:/ipfs/QmUebR26pqG25d18aBELKz8aFFKkmHa8PxntzXTA7o9Ldu"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/libraries/PoolAddress.sol": {
+			"keccak256": "0x5edd84eb8ba7c12fd8cb6cffe52e1e9f3f6464514ee5f539c2283826209035a2",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://f375d0e6d5ea3674e1aa6f112b021e9a86721a6a2f3cb22d673378b30cf0e840",
+				"dweb:/ipfs/QmWJir2qnJyp963mU6U3jEEx9i3H3V5BgKawAfSnG1pC8w"
+			]
+		},
+		"@uniswap/v3-periphery/contracts/libraries/TransferHelper.sol": {
+			"keccak256": "0x9af98b0908c96320ca6d08b22f0efca864742f6adbe5794cafe2d1d2e808b0cd",
+			"license": "GPL-2.0-or-later",
+			"urls": [
+				"bzz-raw://da1d1e81e5bf534f0bf2934b3193db6cb1933f91ec006d2b88e9ad10a617a2d2",
+				"dweb:/ipfs/QmcPBk47QLMFWcX2y2S9eMFsJgoYWBd3R8ey55Bgmv6w6v"
+			]
+		},
+		"contracts/polygon/cattus.sol": {
+			"keccak256": "0x84e6a241a902227bc2da886e1e97edac86ad98130627cb5967a6b035bac1060e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ef9c549033c9f4c96902635b8ced177301c69a2945ce4f13be41f4d30096aec",
+				"dweb:/ipfs/QmV6KV3DNsHfhoMXygVVcmBAgUD9zB6eFbkxgffnMKqE2g"
+			]
+		},
+		"contracts/polygon/quickswapV3.sol": {
+			"keccak256": "0x889b176c4ba83aeee9b3289f94014ec8df2c12808536c42c208753c57ffb0ca0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://185615b4390c5240add55651bbd4c75cbaef86042ea62d3164bb12eacecd20af",
+				"dweb:/ipfs/QmewRLDewjPYJDNxiezPUojFSmfa3AAoRNUKwWN9w65UM2"
+			]
+		}
+	},
+	"version": 1
+}

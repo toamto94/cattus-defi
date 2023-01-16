@@ -1,0 +1,132 @@
+{
+	"compiler": {
+		"version": "0.7.6+commit.7338295f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "token0",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "token1",
+								"type": "address"
+							},
+							{
+								"internalType": "int24",
+								"name": "tickLower",
+								"type": "int24"
+							},
+							{
+								"internalType": "int24",
+								"name": "tickUpper",
+								"type": "int24"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount0Desired",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount1Desired",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount0Min",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount1Min",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "recipient",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct iNFTPositionManager.MintParams",
+						"name": "params",
+						"type": "tuple"
+					}
+				],
+				"name": "mint",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint128",
+						"name": "liquidity",
+						"type": "uint128"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount0",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount1",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/polygon/quickswapV3.sol": "iNFTPositionManager"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/polygon/quickswapV3.sol": {
+			"keccak256": "0x889b176c4ba83aeee9b3289f94014ec8df2c12808536c42c208753c57ffb0ca0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://185615b4390c5240add55651bbd4c75cbaef86042ea62d3164bb12eacecd20af",
+				"dweb:/ipfs/QmewRLDewjPYJDNxiezPUojFSmfa3AAoRNUKwWN9w65UM2"
+			]
+		}
+	},
+	"version": 1
+}
